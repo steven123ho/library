@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="library.css" />
+		<script src="library.js" defer></script>
+	</head>
+
+	<body>
+		<div class="header-container">
+			<h1>MY LIBRARY</h1>
+			<img src="" alt="" class="profile" />
+		</div>
+		<div class="bottom-container">
+			<div class="add-container">
+				<button>+</button>
+			</div>
+
+			<form>
+			<label for="title">Book Title</label>
+			<input type="text" id="title" name="book-title" required />
+
+			<label for="author">Author</label>
+			<input type="text" id="author" name="author-name" />
+
+			<label for="pages">Pages</label>
+			<input type="text" id="pages" name="pages" />
+
+			<div class="status-container">
+				<label for="read-status"
+					>Read
+					<input type="radio" id="read-status" name="status" />
+				</label>
+				<label for="progress-status"
+					>In Progress
+					<input type="radio" id="progress-status" name="status" />
+				</label>
+				<label for="not-status"
+					>Not Read
+					<input type="radio" id="not-status" name="status" />
+				</label>
+
+			</div>
+
+			<button>Submit</button>
+		</form>
+		</div>
+
+		
+	</body>
+</html>

@@ -1,0 +1,123 @@
+* {
+	box-sizing: border-box;
+	border: solid red px;
+	--theme: rgb(170, 138, 255);
+	--accent: rgb(197, 136, 254);
+	--font-family: 'patrick';
+}
+
+@font-face {
+	font-family: 'patrick';
+	src: url(./imgs/PatrickHandSC-Regular.ttf);
+}
+
+body {
+	margin: 0px;
+	font-family: 'patrick';
+	height:100%;
+  	width:100%;
+}
+
+.header-container {
+	background-color: var(--theme);
+	color: white;
+	padding-left: 4vw;
+	box-shadow: 0px -10px 20px 10px gray;
+
+	display: flex;
+	justify-content: space-between;
+}
+
+.bottom-container {
+	padding: 3%;
+}
+
+.add-container {
+	background-color: rgba(128, 128, 128, 0.242);
+	height: clamp(10px, 20vh, 200px);
+	width: clamp(10px, 20vh, 200px);
+	border-radius: 10px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.add-container>button {
+	background-color: var(--theme);
+	width: 50%;
+	height: 50%;
+	border-radius: 100px;
+	font-size: xx-large;
+	color: white;
+	border: 0px;
+	box-shadow: -1px 1px 10px rgb(128, 127, 129);
+}
+
+@keyframes size {
+	from {
+		width: 50%;
+		height: 50%;
+	}
+	to {
+		width: 56%;
+		height: 56%;
+	}
+}
+
+.add-container>button:hover {
+	animation-name: size;
+	animation-duration: .5s;
+	animation-fill-mode: forwards;
+	background-color: var(--accent);
+}
+
+/*Form*/
+
+form {
+	visibility: hidden;
+	width: clamp(250px, 25vw, 35vw);
+	height: 50vh;
+	font-size: large;
+	padding: 2%;
+	background-color: rgba(169, 138, 255, 0.219);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	margin: 0 auto;
+    margin-top: -5%;
+	border-radius: 15px;
+	
+}
+
+.status-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;
+		height: 30vh;}
+  to {opacity:1 ;}
+}
+
+.hide {
+	visibility: visible;
+  	animation: fadeIn .8s; 
+}
+
+form>button {
+	background-color: var(--theme);
+	border-radius: 20px;
+	color: white;
+	height: 8%;
+	width: 40%;
+}
+
+form>button:hover {
+	background-color: var(--accent);
+}
+
+
+
