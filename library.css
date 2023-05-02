@@ -3,6 +3,8 @@
 	border: solid red px;
 	--theme: rgb(170, 138, 255);
 	--accent: rgb(197, 136, 254);
+	--gray: rgba(128, 128, 128, 0.242);
+	--shadow: -1px 1px 6px rgb(128, 127, 129);
 	--font-family: 'patrick';
 }
 
@@ -29,14 +31,18 @@ body {
 }
 
 .bottom-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 20px;
 	padding: 3%;
 }
 
 .add-container {
-	background-color: rgba(128, 128, 128, 0.242);
-	height: clamp(10px, 20vh, 200px);
-	width: clamp(10px, 20vh, 200px);
+	background-color: var(--gray);
 	border-radius: 10px;
+	box-shadow: var(--shadow);
+	max-width: 224px;
+	min-height: 200px;
 
 	display: flex;
 	justify-content: center;
@@ -46,7 +52,7 @@ body {
 .add-container>button {
 	background-color: var(--theme);
 	width: 50%;
-	height: 50%;
+	height: 20%;
 	border-radius: 100px;
 	font-size: xx-large;
 	color: white;
@@ -57,11 +63,11 @@ body {
 @keyframes size {
 	from {
 		width: 50%;
-		height: 50%;
+		height: 20%;
 	}
 	to {
 		width: 56%;
-		height: 56%;
+		height: 26%;
 	}
 }
 
@@ -80,15 +86,15 @@ form {
 	height: 50vh;
 	font-size: large;
 	padding: 2%;
-	background-color: rgba(169, 138, 255, 0.219);
+	background-color: rgb(220, 208, 255);
 
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-	margin: 0 auto;
-    margin-top: -5%;
 	border-radius: 15px;
-	
+	position: fixed;
+	top:20%;
+	left:40%
 }
 
 .status-container {
@@ -111,8 +117,8 @@ form>button {
 	background-color: var(--theme);
 	border-radius: 20px;
 	color: white;
+	width:50%;
 	height: 8%;
-	width: 40%;
 }
 
 form>button:hover {
@@ -120,4 +126,45 @@ form>button:hover {
 }
 
 
+/*Cards*/
 
+.card {
+	background-color: var(--gray);
+	border-radius: 15px;
+	min-height:200px; 
+	padding: 5%;
+	display: flex;
+	box-shadow: var(--shadow);
+}
+
+@keyframes colorChange {
+	from {
+		background-color: var(--gray);
+	}
+	to{
+		background-color: rgba(89, 3, 219, 0.359);
+	}
+}
+
+.card:hover {
+	animation: colorChange .6s;
+	animation-fill-mode: forwards;
+}
+
+.infoContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 5%;	
+}
+
+.infoContainer>h4,
+.infoContainer>h2 {
+	padding: 0px;
+	margin:0px;
+}
+
+.card>img {
+	width: 30%;
+	height: 100%
+}
